@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mars Rover Photo Explorer</title>
+  <!-- Loads 3rd Party Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap" rel="stylesheet">
+  <!-- Loads Lightbox Style -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" />
+<link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+  <main>
+    <form id="mars-form">
+      <h1>Mars Rover Photo Explorer</h1>
+      <table>
+        <tr>
+          <th scope="col">Rover</th>
+          <th scope="col">Mission Start</th>
+          <th scope="col">Mission End</th>
+        </tr>
+        <tr>
+          <td>Curiosity</td>
+          <td>08/06/2012</td>
+          <td>09/28/2019</td>
+        </tr>
+        <tr>
+          <td>Opportunity</td>
+          <td>01/26/2004</td>
+          <td>06/11/2018</td>
+        </tr>
+        <tr>
+          <td>Spirit</td>
+          <td>01/05/2004</td>
+          <td>03/21/2004</td>
+        </tr>
+      </table>
+      <fieldset id="form-options">
+        <legend>Select a rover and a picture date:</legend>
+        <div class="grid">
+          <fieldset id="rover-picker">
+            <legend>Rover:</legend>
+            <div>
+              <input type="radio" name="my-rover" id="curiosity" value="curiosity" data-rule-required="true" data-msg-required="A Rover is Required">
+              <label for="curiosity">Curiosity</label>
+            </div>
+            <div>
+              <input type="radio" name="my-rover" id="opportunity" value="opportunity" disabled>
+              <label for="opportunity">Opportunity <sup>*</sup></label>
+            </div>
+            <div>
+              <input type="radio" name="my-rover" id="spirit" value="spirit" disabled>
+              <label for="spirit">Spirit <sup>*</sup></label>
+            </div>
+            <label id="rover-error" for="my-rover" class="error"></label>
+            
+            <div>* Disabled</div>
+          </fieldset>
+          <div id="date-picker">
+            <label for="picture-date">Picture Date:</label>
+            <input type="date" name="picture-date" id="picture-date" data-rule-required="true" data-msg-required="Date is Required">
+            <label id="picture-date-error" for="picture-date" class="error"></label>
+          </div>
+          <div id="form-controls">
+            <button class="button" id="search-btn">Search</button>
+            <button class="button" id="clear-btn" formnovalidate>Clear</button>
+          </div>
+        </div>
+      </fieldset>
+      <p id="photos-returned"></p>
+      <section id="results" class="hidden">
+        <a id="anchor0" data-lightbox="gallery" href="#"><img id="image0" class="MarsPhoto" height="300" width="300"></a>
+        <a id="anchor1" data-lightbox="gallery" href="#"><img id="image1" class="MarsPhoto" height="300" width="300"></a>
+        <a id="anchor2" data-lightbox="gallery" href="#"><img id="image2" class="MarsPhoto" height="300" width="300"></a>
+        <a id="anchor3" data-lightbox="gallery" href="#"><img id="image3" class="MarsPhoto" height="300" width="300"></a>
+        <a id="anchor4" data-lightbox="gallery" href="#"><img id="image4" class="MarsPhoto" height="300" width="300"></a>
+        <a id="anchor5" data-lightbox="gallery" href="#"><img id="image5" class="MarsPhoto" height="300" width="300"></a>
+        <a id="anchor6" data-lightbox="gallery" href="#"><img id="image6" class="MarsPhoto" height="300" width="300"></a>
+        <a id="anchor7" data-lightbox="gallery" href="#"><img id="image7" class="MarsPhoto" height="300" width="300"></a>
+        <a id="anchor8" data-lightbox="gallery" href="#"><img id="image8" class="MarsPhoto" height="300" width="300"></a>
+        <a id="anchor9" data-lightbox="gallery" href="#"><img id="image9" class="MarsPhoto" height="300" width="300"></a>
+        <a id="anchor10" data-lightbox="gallery" href="#"><img id="image10" class="MarsPhoto" height="300" width="300"></a>
+        <a id="anchor11" data-lightbox="gallery" href="#"><img id="image11" class="MarsPhoto" height="300" width="300"></a>
+        <a id="anchor12" data-lightbox="gallery" href="#"><img id="image12" class="MarsPhoto" height="300" width="300"></a>
+        <a id="anchor13" data-lightbox="gallery" href="#"><img id="image13" class="MarsPhoto" height="300" width="300"></a>
+        <a id="anchor14" data-lightbox="gallery" href="#"><img id="image14" class="MarsPhoto" height="300" width="300"></a>
+        <a id="anchor15" data-lightbox="gallery" href="#"><img id="image15" class="MarsPhoto" height="300" width="300"></a>
+        <a id="anchor16" data-lightbox="gallery" href="#"><img id="image16" class="MarsPhoto" height="300" width="300"></a>
+        <a id="anchor17" data-lightbox="gallery" href="#"><img id="image17" class="MarsPhoto" height="300" width="300"></a>
+        <a id="anchor18" data-lightbox="gallery" href="#"><img id="image18" class="MarsPhoto" height="300" width="300"></a>
+        <a id="anchor19" data-lightbox="gallery" href="#"><img id="image19" class="MarsPhoto" height="300" width="300"></a>
+        <a id="anchor20" data-lightbox="gallery" href="#"><img id="image20" class="MarsPhoto" height="300" width="300"></a>
+        <a id="anchor21" data-lightbox="gallery" href="#"><img id="image21" class="MarsPhoto" height="300" width="300"></a>
+        <a id="anchor22" data-lightbox="gallery" href="#"><img id="image22" class="MarsPhoto" height="300" width="300"></a>
+        <a id="anchor23" data-lightbox="gallery" href="#"><img id="image23" class="MarsPhoto" height="300" width="300"></a>
+        <a id="anchor24" data-lightbox="gallery" href="#"><img id="image24" class="MarsPhoto" height="300" width="300"></a>
+    </form>
+  </main>
+  <!-- Loading JS libraries to support project -->  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+<script src="scrips.js"></script>
+</body>
+
+</html>

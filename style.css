@@ -1,0 +1,206 @@
+/* ----------- Box Sizing ------------ */
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  /* ----------- Error Handling ------------ */
+  
+  .error {
+      color: rgba(232,111,73,.8);
+  }
+  #rover-error, #picture-date-error{
+    font-size:1rem;
+    padding-top:10px;
+    display:block;
+  }
+  
+  .hidden{display:none;}
+  
+  /* ----------- Global Styles ------------ */
+  
+  body{
+    background-image: url("https://assets.codepen.io/7248/mars.jpg");
+    background-position:bottom;
+    color:#fff;
+    background-repeat:no-repeat;
+    background-color:#000;
+    background-size:contain;
+    font-family: 'Bruno Ace', cursive;
+  }
+  main{
+    width:75vw;
+    max-width:1140px;
+    margin:40px auto;
+    border:2px solid #c0c0c0;
+    padding:5vh 5vw;
+    background-color:rgba(0,0,0,.75);
+  }
+  main h1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    font-weight:400;
+    font-variant:small-caps;
+    font-size:3em;
+  }
+  main h1:before, main h1:after {
+    background-color: #fff;
+    content: '\a0';
+    flex-grow: 1;
+    height: 1px;
+    position: relative;
+    top: 0.6em;
+  }
+  main h1:before {
+    margin-right:15px;
+  }
+  main h1:after {
+    margin-left:15px;
+  }
+  
+  /* ----------- Table Style ------------ */
+  table{
+    width:100%;
+    border:1px solid #c0c0c0;
+    border-collapse:collapse;
+  }
+  tr:nth-child(odd){
+    background-color:#222;
+  }
+  th{
+    border:1px solid #c0c0c0;
+    padding:16px;
+    background-color:rgba(232,111,73,.8);
+    text-shadow:2px 2px #000;
+  }
+  td{
+   border:1px solid #c0c0c0;
+   padding:12px; 
+  }
+  
+  /* ----------- Form Options ------------ */
+  #form-options{
+    margin:40px auto;
+  }
+  #form-options .grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    grid-template-rows: auto 100px;
+  }
+  legend{
+    text-transform:uppercase;
+    padding:10px 20px;
+    border:1px solid #c0c0c0;
+    background-color:#000000;
+    font-weight:bold;
+    margin: 0 auto 20px;
+    
+    
+  }
+  #rover-picker{
+   border:none;
+   border-right:4px double #c0c0c0;
+  }
+  #rover-picker legend{
+    padding:0;
+    margin:0;
+    border:none;
+    font-size:1.5rem;
+    background-color:transparent;
+    
+  }
+  label[for="picture-date"], #picture-date{
+    font-size:1.5rem;
+    margin-left:20px
+  }
+  #picture-date{
+    font-size:1.5rem;
+    margin-top:10px;
+    display:block;
+  }
+  #form-controls{
+    grid-area: 2 / 1 / 2 / 3;
+    text-align:center;
+    align-self:center;
+  }
+  
+  /* ------------- Results ------------------ */
+  
+  #results{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap:3vw;
+  }
+  #results.hidden{
+    display:none;
+  }
+  #results img{
+    max-width: 100%;
+    height: auto;
+    border:.1px solid #c0c0c0;
+  }
+  
+  /* ------------- Buttons ------------------ */
+  
+  .button {
+    appearance: button;
+    background-color: #222;
+    background-image: none;
+    border: 1px solid #000;
+    border-radius: 4px;
+    box-shadow: rgba(232,111,73,.8) 4px 4px 0 0,#000 4px 4px 0 1px;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: ITCAvantGardeStd-Bk,Arial,sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    margin: 0 5px 10px 0;
+    overflow: visible;
+    padding: 12px 20px;
+    text-align: center;
+    text-transform: none;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+  }
+  .button:focus {
+    text-decoration: none;
+  }
+  .button:hover {
+    text-decoration: none;
+  }
+  .button:active {
+    box-shadow: rgba(0, 0, 0, .125) 0 3px 5px inset;
+    outline: 0;
+  }
+  .button:not([disabled]):active {
+    box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
+    transform: translate(2px, 2px);
+  }
+  
+  /* ------------- Media Queries ------------------ */
+  
+  @media (min-width: 768px) {
+    .button {
+      padding: 12px 50px;
+    }
+    
+    #results{
+    grid-template-columns: repeat(4,1fr);
+  }
+  }
+  @media (min-width: 960px) {
+    
+    #results{
+    grid-template-columns: repeat(5,1fr);
+  }
+  }
